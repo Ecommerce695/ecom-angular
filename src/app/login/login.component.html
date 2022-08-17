@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <body>
+ 
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <div class="login">
+   <div class="login-header">
+     
+   </div>
+   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+   <div class = "container-fluid" class="loginform">
+       <br>
+     <h1> SIGN  IN </h1><br>
+     <h4>Please sign into your account.</h4>
+     <br>
+     <h3><i class="fa fa-envelope" style="font-size:24px"></i> Username:</h3>
+    
+     <div class="form-group">
+         <input type='text' formControlName="username" class='input-field' [ngClass]="{ 'is-invalid': submitted   }"  placeholder='Email Id' required/>
+         <!-- <div *ngIf="submitted && f.email.errors " class="invalid-feedback">
+              <div *ngIf="f.email.errors.required" class="q1">Email is required</div>
+             <div *ngIf="f.email.errors.email " class="q1">Email must be a valid email address</div> 
+             
+         </div> -->
+ </div>
+
+     <h3><i class="fa fa-lock" style="font-size:24px"></i > Password:</h3>
+     
+     <div class="form-group">
+         <input type='password' formControlName="password" class='input-field' [ngClass]="{ 'is-invalid': submitted  }" placeholder='Enter Password'/>
+         <!-- <div *ngIf="submitted && f.password.errors " class="invalid-feedback">
+             <div *ngIf="f.password.errors.required " class="q1">Password is required</div>
+             <div *ngIf="f.password.errors.minlength" class="q1">Password must be at least 4 characters</div>
+             
+         </div> -->
+         </div>
+
+
+         <!-- <div class="form-group">
+            <h1>Login Form</h1>
+            <label><i class="fa fa-envelope" style="font-size:24px"></i> User Name:</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter username">
+            <span class="error" *ngIf="f.email.invalid && f.email.touched">username is required </span>
+        </div>
+        <div class="form-group">
+            <label><i class="fa fa-lock" style="font-size:24px"></i > Password:</label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Enter password">
+            <span class="error" *ngIf="f.password.invalid && f.password.touched">Password is required </span>
+        </div> -->
+         
+         
+    
+     <button type="submit" class="button" >LOG IN</button>
+     <br><br>
+     <h5>Forgot your password?</h5>
+     <br><br>
+     <h4>Don't have an account? <a class="a1"  > Sign Up here.</a></h4>
+    
+     
+   </div>
+ </form>
+ 
+ </div>
+ </body>
+ </html>
